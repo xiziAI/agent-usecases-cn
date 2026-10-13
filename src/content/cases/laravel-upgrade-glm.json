@@ -1,0 +1,36 @@
+{
+  "slug": "laravel-upgrade-glm",
+  "title": "用 GLM 把七年前的 Laravel 官网升级重构",
+  "summary": "从 Laravel 5.x 升级到 12，自评两三周的活，GLM4.7 不到一小时完成。",
+  "agents": [
+    "GLM",
+    "Codex"
+  ],
+  "category": "coding",
+  "tags": [
+    "重构",
+    "PHP",
+    "国产模型"
+  ],
+  "scenario": "七年前用 Laravel 5.2/5.4 写的公司官网需要升级重构。",
+  "steps": [
+    "让 GLM4.7 把项目升级到 Laravel 12",
+    "再加几个小功能（约两小时）",
+    "功能变多后换 Codex 修复遗留 bug"
+  ],
+  "result": "作者称升级不到一小时完成，原本估计两三周。",
+  "pitfalls": "加更多功能时 GLM4.7“表现得像个傻子”；换 Codex 修了遗留 bug，但完善复杂功能仍要调很久。",
+  "prompt": "这是一个 Laravel【当前版本】项目。请制定升级到 Laravel【目标版本】的计划：列出不兼容的依赖和写法，逐步升级，每一步后运行测试和页面冒烟检查。先在新分支上做，不要动生产数据库配置。",
+  "effort": "升级约 1 小时，加功能约 2 小时（作者所述）",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "直连",
+  "cn_access_note": "GLM（智谱）国内直连；Codex 需代理。",
+  "source_url": "https://x.com/PPaddingto47613/status/2088086861462061218",
+  "source_author": "Paddington Lee",
+  "source_platform": "X",
+  "source_date": "2026-08-14",
+  "lang": "zh",
+  "added_at": "2026-10-13",
+  "status": "published"
+}

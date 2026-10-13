@@ -1,0 +1,7 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { categoryName } from '../data/categories';
+interface Props { cases: CollectionEntry<'cases'>[]; }
+const { cases } = Astro.props;
+---
+{cases.length ? <ul class="case-list">{cases.map(({ data: c }) => <li class="case-card"><div class="meta"><a href={`/category/${c.category}/`}>{categoryName(c.category)}</a><span>{c.cn_access}</span><span>难度 {'●'.repeat(c.difficulty)}{'○'.repeat(3 - c.difficulty)}</span></div><h3><a href={`/use-case/${c.slug}/`}>{c.title} <span aria-hidden="true">↗</span></a></h3><p>{c.summary}</p><div class="card-bottom"><span>{c.agents.join(' / ')}</span><time datetime={c.added_at}>{c.added_at}</time></div></li>)}</ul> : <p class="empty">这里还没有案例，先去<a href="/">看看其他分类</a>。</p>}

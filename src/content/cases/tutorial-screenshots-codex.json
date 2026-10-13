@@ -1,0 +1,35 @@
+{
+  "slug": "tutorial-screenshots-codex",
+  "title": "让 Codex 自动截图标注写教程",
+  "summary": "教程博主做了开源截图工具“拓”，接入 Codex 后 Agent 自己截图、圈重点、打马赛克。",
+  "agents": [
+    "Codex"
+  ],
+  "category": "content",
+  "tags": [
+    "教程",
+    "截图",
+    "开源"
+  ],
+  "scenario": "教程博主每天最高频操作是截图标注，现有工具不能被 Agent 调用。",
+  "steps": [
+    "用 Codex + GLM 做开源截图工具“拓”，支持 Skill 和 CLI",
+    "把 ta-cli 接入 Codex",
+    "让 Codex 写教程文档时自动截图并标注关键位置"
+  ],
+  "result": "作者称写教程截图“全程不用我动手”；工具耗时 3 天做出。",
+  "pitfalls": "原文未提及；涉及隐私的截图要检查马赛克是否到位。",
+  "prompt": "为【软件/网站】写一份【功能】的中文图文教程：每一步截图，用箭头和序号标出要点击的位置，对【账号、手机号】等隐私信息打马赛克，最后输出 Markdown 文档到【路径】。",
+  "effort": "工具开发 3 天（作者所述）",
+  "cost": "开源免费",
+  "difficulty": 2,
+  "cn_access": "需代理",
+  "cn_access_note": "Codex 需代理；作者称也支持 WorkBuddy、豆包等。",
+  "source_url": "https://x.com/aikangarooking/status/2093975500125577269",
+  "source_author": "@aikangarooking",
+  "source_platform": "X",
+  "source_date": "2026-08-30",
+  "lang": "zh",
+  "added_at": "2026-10-13",
+  "status": "published"
+}

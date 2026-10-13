@@ -1,0 +1,36 @@
+{
+  "slug": "stablecoin-deep-research",
+  "title": "花 0.1 美元让 Manus 做一份深度研究",
+  "summary": "Manus 接入 Heurist Mesh Skill，一次审批后 2 分钟交付美国稳定币采用情况研究。",
+  "agents": [
+    "Manus"
+  ],
+  "category": "research",
+  "tags": [
+    "深度研究",
+    "行业报告"
+  ],
+  "scenario": "需要一份美国 2026 年稳定币采用情况的研究。",
+  "steps": [
+    "给 Manus 安装 Heurist Mesh Skill",
+    "提交深度研究任务",
+    "用户审批一次，通过 Inflow 支付 0.10 USDC",
+    "Agent 自主运行"
+  ],
+  "result": "2 分钟交付完整分析（来源为 Heurist 官方账号）。",
+  "pitfalls": "需要一次审批和 0.10 USDC；来源是工具方自己的宣传帖。",
+  "prompt": "对【话题】做深度研究，覆盖【使用数据、监管、主要玩家、风险】，用近期可靠来源并逐条引用。输出一页报告：顶部摘要加待解决问题清单。需要调用工具或付费数据前先问我。",
+  "effort": "约 2 分钟",
+  "cost": "0.10 USDC（约 0.7 元）",
+  "difficulty": 1,
+  "cn_access": "需代理",
+  "cn_access_note": "Manus 国内访问受限；可用 Kimi、秘塔深度研究。",
+  "source_url": "https://x.com/heurist_ai/status/2031747153161548199",
+  "source_author": "Heurist",
+  "source_platform": "X",
+  "source_date": "2026-03-11",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/research-us-stablecoin-adoption-with-an-agent"
+}

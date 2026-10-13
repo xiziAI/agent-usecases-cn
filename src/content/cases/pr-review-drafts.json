@@ -1,0 +1,36 @@
+{
+  "slug": "pr-review-drafts",
+  "title": "让 Claude Code 起草 PR 评审，人来改再发",
+  "summary": "做了个评审收件箱：Claude Code 给积压 PR 起草评审，人可讨论、改写、删除后再手动发。",
+  "agents": [
+    "Claude Code"
+  ],
+  "category": "coding",
+  "tags": [
+    "代码评审",
+    "GitHub"
+  ],
+  "scenario": "待评审 PR 积压到 15 个。",
+  "steps": [
+    "监听请求自己评审的 PR",
+    "用现有 CLI 登录运行 Claude Code",
+    "在本地网页生成摘要和行内评论草稿",
+    "人工修改后从自己账号发送"
+  ],
+  "result": "缓解了 15 个 PR 的积压，避免未经审核的 AI 评论直接发出。",
+  "pitfalls": "需要付费订阅，代码会发给 Anthropic；默认只读，发送需人工。",
+  "prompt": "查看【仓库】里等我评审的 PR，逐个阅读 diff，按重要性起草评审意见，保存到【目录】。不要发评论或批准任何 PR。",
+  "effort": "原文未提及",
+  "cost": "需 Claude Code 付费订阅（金额原文未提及）",
+  "difficulty": 2,
+  "cn_access": "需代理",
+  "cn_access_note": "Claude Code 和 GitHub 需代理。",
+  "source_url": "https://www.reddit.com/r/ClaudeCode/comments/1wp0zkk/i_built_a_claude_code_review_inbox_for_the_prs",
+  "source_author": "Reddit 用户",
+  "source_platform": "Reddit",
+  "source_date": "原文未提及",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/draft-pull-request-reviews-for-you-to-edit-and-send"
+}

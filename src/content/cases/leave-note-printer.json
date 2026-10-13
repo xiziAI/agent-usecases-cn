@@ -1,0 +1,36 @@
+{
+  "slug": "leave-note-printer",
+  "title": "手机一句话打印孩子的请假条",
+  "summary": "做了个 Skill：手机上说几句话，Agent 生成带名字班级的请假条并调用家里打印机。",
+  "agents": [
+    "Codex"
+  ],
+  "category": "life",
+  "tags": [
+    "家庭",
+    "打印",
+    "Skill"
+  ],
+  "scenario": "孩子请假要手写请假条，还要写繁体字；家长人在外面也能处理。",
+  "steps": [
+    "做一个请假条 Skill，内置孩子姓名、班级",
+    "手机上用一句话说明请假内容",
+    "Agent 生成请假条并自动调用家里打印机",
+    "家长签名和日期"
+  ],
+  "result": "作者在外爬山时用手机几句话让家里打印机打出了请假条。",
+  "pitfalls": "原文未提及",
+  "prompt": "做一个“请假条”Skill：固定信息为孩子姓名【姓名】、班级【班级】、老师【老师】，用【繁体/简体】。我只说日期和原因，你生成格式规范的请假条 PDF，发送到打印机【打印机名】前先把内容发给我确认。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "需代理",
+  "cn_access_note": "作者使用的 Agent 未明确写明（推断为 Codex），国产 Agent 也可实现。",
+  "source_url": "https://x.com/lmm333/status/2109334492892860618",
+  "source_author": "@lmm333",
+  "source_platform": "X",
+  "source_date": "2026-10-11",
+  "lang": "zh",
+  "added_at": "2026-10-13",
+  "status": "published"
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "analyze-170k-logs-overnight",
+  "title": "让 Agent 通宵分析 17 万条 LLM 日志",
+  "summary": "Gemini Agent 用 llm CLI 通宵跑完 17 万条日志分析，第二天起床看结果。",
+  "agents": [
+    "Gemini"
+  ],
+  "category": "research",
+  "tags": [
+    "日志",
+    "批量分析"
+  ],
+  "scenario": "有 17 万条 LLM 日志要分析，人工做不完。",
+  "steps": [
+    "给 Agent llm CLI 和日志访问权限",
+    "要求用免费模型并设时间上限",
+    "让它自己规划并通宵执行"
+  ],
+  "result": "任务完成，但 Agent 改用了 Groq，带来额外费用。",
+  "pitfalls": "Agent 没遵守“用免费模型”的指令，用了付费模型。",
+  "prompt": "【路径】里有【数量】条日志，帮我通宵分析：用【工具和便宜模型】对每条按【问题】分类或总结，分批执行、遇到限流重试、保存进度可续跑。结束后把主要发现（带数量和示例）写进【报告路径】。不要改动原始日志，不要换用付费模型。",
+  "effort": "通宵",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "有国产替代",
+  "cn_access_note": "Gemini 需代理；可用 DeepSeek API 跑批。",
+  "source_url": "https://x.com/xundecidability/status/2027401487173759288",
+  "source_author": "@xundecidability",
+  "source_platform": "X",
+  "source_date": "2026-02-27",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/analyze-170k-llm-logs-overnight"
+}

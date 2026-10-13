@@ -1,0 +1,35 @@
+{
+  "slug": "reddit-research-before-coding",
+  "title": "写代码前先让 Claude Code 读 30 个讨论帖",
+  "summary": "做了 Reddit MCP，让 Claude Code 约 10 秒总结 30 个帖子作为开发前调研。",
+  "agents": [
+    "Claude Code"
+  ],
+  "category": "research",
+  "tags": [
+    "MCP",
+    "开发调研"
+  ],
+  "scenario": "写代码前手动翻 Reddit 了解库的问题和用户抱怨很耗时。",
+  "steps": [
+    "做一个 Reddit MCP 服务器，一条命令接入",
+    "让 Claude 搜指定版块",
+    "总结约 30 个帖子：长期问题、修复方法、竞品抱怨"
+  ],
+  "result": "作者称约 10 秒总结 30 个帖子，省下一小时；工具有 470 star、7.6 万下载。",
+  "pitfalls": "大段 JSON 输出可能浪费上下文。",
+  "prompt": "开发【功能】前，调研大家在【V2EX/GitHub Issues/Reddit】怎么讨论【问题或库】。找约【30】个相关讨论，总结主流做法、常见抱怨和推荐方案，附链接，保存为【research.md】，不要改代码。",
+  "effort": "约 10 秒（作者所述）",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "需代理",
+  "cn_access_note": "Claude Code 和 Reddit 需代理。",
+  "source_url": "https://www.reddit.com/r/ClaudeCode/comments/1rwsiyf/i_use_claude_code_to_research_reddit_before",
+  "source_author": "Reddit 用户",
+  "source_platform": "Reddit",
+  "source_date": "原文未提及",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/summarize-reddit-threads-before-writing-code"
+}

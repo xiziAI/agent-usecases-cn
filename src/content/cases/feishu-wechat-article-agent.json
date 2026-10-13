@@ -1,0 +1,35 @@
+{
+  "slug": "feishu-wechat-article-agent",
+  "title": "在飞书里养一个公众号写手 Agent",
+  "summary": "飞书里的智能体 Peter（背后接 Hermes）负责公众号素材收集、撰写和发布。",
+  "agents": [
+    "Hermes Agent",
+    "飞书"
+  ],
+  "category": "content",
+  "tags": [
+    "公众号",
+    "飞书"
+  ],
+  "scenario": "公众号从选题到发布全流程耗时。",
+  "steps": [
+    "在飞书接入背后为 Hermes 的智能体",
+    "给它一个选题",
+    "由它收集素材、撰写、发布"
+  ],
+  "result": "作者发视频展示了从选题到成品的过程，称如果选题不是来自 PDF，基本能全自动。",
+  "pitfalls": "选题来自 PDF 时还不能全自动（作者所述）。",
+  "prompt": "这是本期选题：【选题】。请收集 5 个可靠来源（附链接），写一篇【字数】字的公众号文章，语气【风格】，生成标题 3 个备选。完成后存为草稿发给我审核，不要直接群发。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 3,
+  "cn_access": "有国产替代",
+  "cn_access_note": "飞书直连；Hermes 背后模型可能需代理，可换国产模型。",
+  "source_url": "https://x.com/Stephen4171127/status/2071201887953568022",
+  "source_author": "@Stephen4171127",
+  "source_platform": "X",
+  "source_date": "2026-06-28",
+  "lang": "zh",
+  "added_at": "2026-10-13",
+  "status": "published"
+}

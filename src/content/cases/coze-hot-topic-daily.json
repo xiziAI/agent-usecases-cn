@@ -1,0 +1,34 @@
+{
+  "slug": "coze-hot-topic-daily",
+  "title": "用扣子 Agent 每天推送感兴趣的热点日报",
+  "summary": "扣子 3.0 单独 Agent 做话题追踪加定时任务，每天推热点日报，有新动态主动推送。",
+  "agents": [
+    "扣子"
+  ],
+  "category": "research",
+  "tags": [
+    "热点",
+    "定时任务"
+  ],
+  "scenario": "内容创作者要追热点，刷手机耗时间。",
+  "steps": [
+    "在扣子 3.0 建一个话题追踪 Agent",
+    "设定感兴趣的话题和定时任务",
+    "每天接收日报，有新动态时主动推送快讯"
+  ],
+  "result": "作者称“省了不少刷手机的时间”。",
+  "pitfalls": "原文未提及",
+  "prompt": "每天【时间】追踪这些话题：【话题列表】。汇总过去 24 小时的重要动态，每条一句话加来源链接，按重要性排序，最多 10 条。重大新闻随时单独推送给我。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 1,
+  "cn_access": "直连",
+  "cn_access_note": "扣子国内直连。",
+  "source_url": "https://x.com/youyoumaixiang/status/2062111015945515461",
+  "source_author": "@youyoumaixiang",
+  "source_platform": "X",
+  "source_date": "2026-06-03",
+  "lang": "zh",
+  "added_at": "2026-10-13",
+  "status": "published"
+}

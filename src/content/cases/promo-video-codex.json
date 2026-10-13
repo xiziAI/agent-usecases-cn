@@ -1,0 +1,35 @@
+{
+  "slug": "promo-video-codex",
+  "title": "让 Codex 给自己的网站做多平台宣传视频",
+  "summary": "儿童科学游戏站推广期，让 Codex 全程做宣传视频，含录制、字幕、配音，并按平台出不同版本。",
+  "agents": [
+    "Codex"
+  ],
+  "category": "growth",
+  "tags": [
+    "视频",
+    "推广",
+    "独立开发"
+  ],
+  "scenario": "独立开发者做了儿童科学游戏网站，进入推广阶段，需要宣传视频。",
+  "steps": [
+    "让 Codex 录制网站操作画面",
+    "自动加字幕和 AI 配音",
+    "针对不同平台输出不同版本，音色各不相同"
+  ],
+  "result": "作者展示了成品视频，称“全程 AI 搞定”。播放和转化数据原文未提及。",
+  "pitfalls": "原文未提及",
+  "prompt": "为我的网站【网址】做一条【时长】秒的宣传视频：用浏览器录制【核心功能】的操作画面，配中文字幕和配音，分别输出【抖音竖屏 / B站横屏 / 小红书】版本。先给我脚本确认再开始录制。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 3,
+  "cn_access": "需代理",
+  "cn_access_note": "Codex 需代理；配音可换国产 TTS。",
+  "source_url": "https://x.com/leo_xiaolei/status/2079823446217764960",
+  "source_author": "水族店刘老板 @leo_xiaolei",
+  "source_platform": "X",
+  "source_date": "2026-07-22",
+  "lang": "zh",
+  "added_at": "2026-10-13",
+  "status": "published"
+}

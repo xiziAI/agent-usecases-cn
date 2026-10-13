@@ -1,0 +1,36 @@
+{
+  "slug": "tax-contract-reminders",
+  "title": "让 Agent 盯税务和合同截止日",
+  "summary": "Claude Cowork 主动设置季度税、合同到期、法规变化的邮件提醒，并帮忙审合同。",
+  "agents": [
+    "Claude Cowork"
+  ],
+  "category": "finance",
+  "tags": [
+    "税务",
+    "合同",
+    "提醒"
+  ],
+  "scenario": "自由职业者跟不上季度报税、合同到期和用工法规。",
+  "steps": [
+    "向 Claude 说明行政事务上的困难",
+    "接受它主动提出的邮件提醒方案",
+    "让它审阅和起草合同、做市场价分析"
+  ],
+  "result": "没有具体数字。作者认为 80% 的事做得够好，最后 20% 不行。",
+  "pitfalls": "最后 20% 往往仍需要人。",
+  "prompt": "阅读【文件夹】里的合同，为【税务申报截止日、合同到期日】设置提醒，并审阅【合同名】，对比【岗位/服务】的市场价，标出异常条款。设置提醒前先给我看清单。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 1,
+  "cn_access": "需代理",
+  "cn_access_note": "Claude 需代理；国内可用飞书日历+国产模型。",
+  "source_url": "https://x.com/karomancer/status/2108103107133444545",
+  "source_author": "Karina Chow",
+  "source_platform": "X",
+  "source_date": "2026-10-08",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/set-tax-and-contract-reminders-and-review-contracts"
+}

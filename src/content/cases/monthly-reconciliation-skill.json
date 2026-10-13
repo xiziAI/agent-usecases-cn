@@ -1,0 +1,36 @@
+{
+  "slug": "monthly-reconciliation-skill",
+  "title": "把每月对账封装成 Codex Skill",
+  "summary": "用 Codex plan 模式沟通需求，自动生成 Skill，签名、填日期、盖章 1 分钟搞定。",
+  "agents": [
+    "Codex"
+  ],
+  "category": "finance",
+  "tags": [
+    "对账",
+    "Skill",
+    "财务"
+  ],
+  "scenario": "每月要重复做对账，签名、填日期、盖章都是机械活。",
+  "steps": [
+    "在 Codex 打开 plan 模式，把需求说清楚",
+    "反复沟通，补齐细节和要求",
+    "执行计划，Codex 自动生成 Skill",
+    "以后每月直接调用"
+  ],
+  "result": "作者称“仅需 1 分钟”完成签名填日期和盖章。",
+  "pitfalls": "原文未提及；电子盖章涉及公司印章授权，务必确认合规。",
+  "prompt": "我每月要处理【对账单类型】：需要在【位置】加签名图片、填写当月日期、加盖【印章图片】。请先进入计划模式，问清楚所有细节后，生成一个可复用的 Skill，输入文件夹【路径】，输出到【输出路径】，不覆盖原文件。",
+  "effort": "每次约 1 分钟（作者所述）",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "需代理",
+  "cn_access_note": "Codex 需代理；国产可用 Kimi Code、CodeBuddy 等。",
+  "source_url": "https://x.com/cryozerolabs/status/2073993972574470301",
+  "source_author": "冰零 @cryozerolabs",
+  "source_platform": "X",
+  "source_date": "2026-07-06",
+  "lang": "zh",
+  "added_at": "2026-10-13",
+  "status": "published"
+}

@@ -1,0 +1,37 @@
+{
+  "slug": "coze-paid-ai-daily",
+  "title": "用扣子搭海外 AI 日报，小红书 9.9 元订阅",
+  "summary": "定时抓海外科技榜单，DeepSeek 翻译提炼成日报，第二天 4 个付费订阅。",
+  "agents": [
+    "扣子",
+    "DeepSeek"
+  ],
+  "category": "solo",
+  "tags": [
+    "副业",
+    "小红书",
+    "日报"
+  ],
+  "scenario": "投资人做副业试验：手工做图太慢，想用 Agent 把海外热点做成可卖的日报。",
+  "steps": [
+    "用扣子搭一个极简 Agent",
+    "定时抓取海外 Top 5 科技榜单（HN、Reddit 等）",
+    "DeepSeek 翻译并提炼，生成 Markdown 日报",
+    "在小红书标价 9.9 元/月，引流到微信群"
+  ],
+  "result": "第二天：推文 800 多观看，新增 4 个付费订阅，入账 39.6 元（作者所述）。",
+  "pitfalls": "只有两天数据，长期留存原文未提及；转载海外内容注意版权。",
+  "prompt": "每天【时间】抓取 Hacker News 和【Reddit 版块】热度前 5 的 AI 工具帖，翻译成中文，每条写：它是什么、解决什么问题、国内能否使用、原文链接。输出 Markdown 日报，不确定的信息标注“待核实”。",
+  "effort": "搭建 20 分钟（作者所述）",
+  "cost": "0 元（作者所述）",
+  "difficulty": 1,
+  "cn_access": "直连",
+  "cn_access_note": "扣子、DeepSeek 国内直连。",
+  "source_url": "https://x.com/Sia_VCinvestor/status/2082800891191537755",
+  "source_author": "@Sia_VCinvestor",
+  "source_platform": "X",
+  "source_date": "2026-07-30",
+  "lang": "zh",
+  "added_at": "2026-10-13",
+  "status": "published"
+}

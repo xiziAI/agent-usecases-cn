@@ -1,0 +1,8 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CaseList from '../../components/CaseList.astro';
+import { allCases, agentNames, agentSlug } from '../../lib/cases';
+export async function getStaticPaths() { const cases = await allCases(); return agentNames(cases).map(name => ({ params: { slug: agentSlug(name) }, props: { name, cases: cases.filter(c => c.data.agents.includes(name)) } })); }
+const { name, cases } = Astro.props;
+---
+<Layout title={`${name} 案例`}><a class="back" href="/">← 全部案例</a><div class="page-heading"><p class="eyebrow">AGENT / {cases.length} 个案例</p><h1>{name}</h1></div><CaseList cases={cases} /></Layout>

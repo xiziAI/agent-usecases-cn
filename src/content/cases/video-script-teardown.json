@@ -1,0 +1,35 @@
+{
+  "slug": "video-script-teardown",
+  "title": "用 Codex 做一个爆款视频拆解员工",
+  "summary": "甩一个视频链接，自动拿逐字稿并拆解标题、钩子、用户心理和爆款公式。",
+  "agents": [
+    "Codex"
+  ],
+  "category": "content",
+  "tags": [
+    "短视频",
+    "爆款拆解",
+    "逐字稿"
+  ],
+  "scenario": "自媒体作者研究爆款视频时，要先完整扒脚本再让 AI 分析，手工步骤繁琐。",
+  "steps": [
+    "用 Codex 搭一个“内容员工”工具",
+    "输入视频链接，自动获取逐字稿",
+    "让 AI 按标题类型、黄金钩子、用户心理、爆款公式、爆款信号逐项拆解"
+  ],
+  "result": "作者称以前很麻烦的这一步“现在几秒就能搞定”。具体实现细节原文未提及。",
+  "pitfalls": "原文未提及",
+  "prompt": "帮我写一个本地脚本：输入【视频链接】，下载音频并转成逐字稿（保存到【输出目录】），然后按以下维度输出拆解报告：标题类型、开头 3 秒钩子、目标用户心理、爆款公式、可复用的结构。只处理我有权使用的公开视频，先拿一个链接试跑给我看。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "需代理",
+  "cn_access_note": "Codex 需代理；可用 Kimi、通义等国产模型做拆解。",
+  "source_url": "https://x.com/gooduckyyn/status/2072570152332484699",
+  "source_author": "@gooduckyyn",
+  "source_platform": "X",
+  "source_date": "2026-07-02",
+  "lang": "zh",
+  "added_at": "2026-10-13",
+  "status": "published"
+}

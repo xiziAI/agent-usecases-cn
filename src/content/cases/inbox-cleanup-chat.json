@@ -1,0 +1,34 @@
+{
+  "slug": "inbox-cleanup-chat",
+  "title": "聊着天把 7000 封邮件降到 1000 封以内",
+  "summary": "用 dots 对话整理 Gmail 5000 封、Outlook 2000 封：打标签、归档、移文件夹。",
+  "agents": [
+    "dots"
+  ],
+  "category": "office",
+  "tags": [
+    "邮件",
+    "整理"
+  ],
+  "scenario": "订阅太多，邮件根本看不完，两个邮箱积压约 7000 封。",
+  "steps": [
+    "把 Gmail 和 Outlook 接入 dots",
+    "通过对话让它打标签、归档、移动文件夹",
+    "约 20 轮对话完成"
+  ],
+  "result": "收件箱降到 1000 封以内（作者所述）。",
+  "pitfalls": "原文未提及",
+  "prompt": "帮我整理【邮箱】收件箱：先按发件人统计数量，列出订阅类和通知类邮件建议归档的规则，等我确认后再执行打标签和归档。不要删除任何邮件，不要回复或退订。",
+  "effort": "约 20 轮对话",
+  "cost": "原文未提及",
+  "difficulty": 1,
+  "cn_access": "需代理",
+  "cn_access_note": "Gmail 与海外 Agent 需代理。",
+  "source_url": "https://x.com/lmm333/status/2109334492892860618",
+  "source_author": "@lmm333",
+  "source_platform": "X",
+  "source_date": "2026-10-11",
+  "lang": "zh",
+  "added_at": "2026-10-13",
+  "status": "published"
+}

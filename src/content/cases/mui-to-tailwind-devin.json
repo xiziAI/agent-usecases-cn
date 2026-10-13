@@ -1,0 +1,36 @@
+{
+  "slug": "mui-to-tailwind-devin",
+  "title": "让 Devin 把 MUI 组件改成 Tailwind",
+  "summary": "Lumos 让 Devin 做 MUI 转 Tailwind 等日常活，48 天 44 个 PR，合并 19 个。",
+  "agents": [
+    "Devin"
+  ],
+  "category": "coding",
+  "tags": [
+    "前端",
+    "重构"
+  ],
+  "scenario": "团队有大量机械性的前端改造。",
+  "steps": [
+    "给 Devin 一个简短 prompt",
+    "允许它运行单元测试",
+    "在 Knowledge 里写好代码库规则",
+    "工程师评审 PR"
+  ],
+  "result": "转换效果不错但 PR 不能直接合并。整体 48 天 44 个 PR，合并 19 个。",
+  "pitfalls": "平均每个 PR 约 20 美元（5–40 美元）；每条命令上限 10 ACU（约 20 美元）。",
+  "prompt": "在【仓库】中把【目录】下的 React 组件从【MUI】改成【Tailwind】，外观和行为保持不变。每改完一个组件就跑单元测试，修好再继续。全部通过后开 PR，列出已改组件和没改成的。",
+  "effort": "原文未提及",
+  "cost": "每个 PR 约 20 美元（约 140 元）",
+  "difficulty": 2,
+  "cn_access": "有国产替代",
+  "cn_access_note": "Devin 需代理；可用 Codex、CodeBuddy 等。",
+  "source_url": "https://www.lumos.com/blog/cognitions-devin-your-new-junior-engineer",
+  "source_author": "Lumos",
+  "source_platform": "公司博客",
+  "source_date": "原文未提及",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/convert-react-mui-components-to-tailwind-with-devin"
+}

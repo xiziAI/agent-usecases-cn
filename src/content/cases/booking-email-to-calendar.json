@@ -1,0 +1,37 @@
+{
+  "slug": "booking-email-to-calendar",
+  "title": "把预订确认邮件自动变成日程",
+  "summary": "n8n 读取打了标签的预订邮件和 PDF 附件，抽取时间地点确认号，写入专用日历。",
+  "agents": [
+    "n8n"
+  ],
+  "category": "office",
+  "tags": [
+    "日历",
+    "邮件",
+    "n8n"
+  ],
+  "scenario": "给 CEO 做的：收件箱塞满机票酒店预订确认，手工录日程太累。",
+  "steps": [
+    "给邮件打“Events”标签触发",
+    "把正文转 PDF，和附件一起解析",
+    "合并结果，写入“Auto-imported”日历",
+    "缺字段时标记并通知人工"
+  ],
+  "result": "预订自动生成日程。一封邮件含多个行程的情况尚未处理。",
+  "pitfalls": "仍需人工给邮件打标签才能触发。",
+  "prompt": "做一个 n8n 工作流：监听【邮箱】中带【标签】的预订确认邮件，从正文或 PDF 附件抽取名称、日期、时间、地点、确认号，写入日历【日历名】。解析不了的不要猜，发通知给我。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "有国产替代",
+  "cn_access_note": "n8n 可自部署；Gmail/Google 日历需代理，可换飞书日历。",
+  "source_url": "https://www.reddit.com/r/n8n/comments/1tc4fpb/built_an_n8n_workflow_that_turns_any_booking",
+  "source_author": "Reddit 用户",
+  "source_platform": "Reddit",
+  "source_date": "2026-05-13",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/turn-booking-confirmation-emails-into-calendar-events"
+}

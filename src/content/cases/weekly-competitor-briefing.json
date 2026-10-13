@@ -1,0 +1,35 @@
+{
+  "slug": "weekly-competitor-briefing",
+  "title": "给产品经理做每周竞品简报",
+  "summary": "PM 让 Hermes 每周一生成竞品简报，Skill 自我改写 4 次，第 6 周发现了手工没发现的规律。",
+  "agents": [
+    "Hermes Agent"
+  ],
+  "category": "product",
+  "tags": [
+    "竞品",
+    "周报"
+  ],
+  "scenario": "产品经理每周要人工盯竞品动态。",
+  "steps": [
+    "周二搭好竞品监控工作流",
+    "连续 6 周每周一给同一个 prompt",
+    "Hermes 每 15 次工具调用复盘一次并更新 Skill"
+  ],
+  "result": "任务耗时从第 1 周 20 分钟降到第 6 周 8 分钟；第 6 周发现了作者手工三周没发现的竞品规律。",
+  "pitfalls": "完整 Skill 和设置步骤在付费墙后。",
+  "prompt": "每周【周几】【时间】，调研这些竞品过去一周的动态：【竞品名和网址】。查看博客、更新日志、定价页、招聘和新闻，写一页简报：变化是什么、对【我的产品】意味着什么、跨周的规律。先跑一次给我看，再设定周期任务。",
+  "effort": "每周 8–20 分钟",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "有国产替代",
+  "cn_access_note": "Hermes 需海外模型；可用扣子定时任务替代。",
+  "source_url": "https://www.news.aakashg.com/p/hermes-agent-guide",
+  "source_author": "Aakash Gupta",
+  "source_platform": "Newsletter",
+  "source_date": "原文未提及",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/run-a-weekly-competitive-monitoring-briefing-for-product-man"
+}

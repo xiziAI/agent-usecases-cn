@@ -1,0 +1,36 @@
+{
+  "slug": "reddit-pain-point-research",
+  "title": "用 Codex Skill 挖用户痛点",
+  "summary": "把 Reddit 用户调研 Agent 改写成 Codex Skill：找痛点、核实社区、收集证据、聚类、看付费信号。",
+  "agents": [
+    "Codex"
+  ],
+  "category": "product",
+  "tags": [
+    "用户研究",
+    "Skill"
+  ],
+  "scenario": "原来的 Reddit 调研 Agent 架构复杂。",
+  "steps": [
+    "把方法论写成 Codex Skill",
+    "主调研前设人工审批点",
+    "用小 Python 脚本做校验、打分、去重",
+    "产出结构化报告"
+  ],
+  "result": "达到了原 Agent 的调研流程，架构更简单。原文没有量化对比。",
+  "pitfalls": "这是演示性质，依赖 Codex 作为运行环境。",
+  "prompt": "调研【话题/品类】的用户痛点：找到相关社区（中文可用小红书、V2EX、知乎），确认活跃且对题，收集带链接的原话作为证据，把抱怨聚类成主题，标出有付费意愿的信号。按证据强度排序，保存到【文件】。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "需代理",
+  "cn_access_note": "Codex 和 Reddit 需代理。",
+  "source_url": "https://www.reddit.com/r/AgentsOfAI/comments/1vjjkd6/i_replaced_a_fairly_complex_reddit_research_agent",
+  "source_author": "Reddit 用户",
+  "source_platform": "Reddit",
+  "source_date": "原文未提及",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/research-reddit-customer-pain-points-with-a-skill"
+}

@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CaseList from '../../components/CaseList.astro';
+import { categories } from '../../data/categories';
+import { allCases } from '../../lib/cases';
+export function getStaticPaths() { return categories.map(category => ({ params: { slug: category.slug }, props: { category } })); }
+const { category } = Astro.props;
+const cases = (await allCases()).filter(c => c.data.category === category.slug);
+---
+<Layout title={category.name}><a class="back" href="/">← 全部案例</a><div class="page-heading"><p class="eyebrow">场景分类 / {cases.length} 个案例</p><h1>{category.name}</h1></div><CaseList cases={cases} /></Layout>

@@ -1,0 +1,35 @@
+{
+  "slug": "sync-skills-symlink",
+  "title": "用软链让 Claude Code 和 Codex 共享同一份 Skill",
+  "summary": "两端 Skill 总要手动同步，用 Mac 软链共用一份，并开源成 sync-skills。",
+  "agents": [
+    "Claude Code",
+    "Codex"
+  ],
+  "category": "coding",
+  "tags": [
+    "Skill",
+    "开发环境"
+  ],
+  "scenario": "同时用 Claude Code 和 Codex，两边的 Skill 要手动同步，还常忘记哪边是最新版。",
+  "steps": [
+    "确定一份 Skill 主目录",
+    "用 macOS 软链接把两端的 skills 目录指向同一份",
+    "封装成开源 skill：sync-skills"
+  ],
+  "result": "作者称“改哪边都一样，再也不用同步”。",
+  "pitfalls": "原文未提及",
+  "prompt": "我的 Skill 分散在【Claude Code skills 目录】和【Codex skills 目录】。请先列出两边差异，把较新的版本合并到【主目录】，备份原目录后用软链接让两边指向主目录。每一步执行前先给我看命令。",
+  "effort": "原文未提及",
+  "cost": "免费",
+  "difficulty": 1,
+  "cn_access": "需代理",
+  "cn_access_note": "两款工具都需代理；软链方法本身与工具无关。",
+  "source_url": "https://x.com/Tasihi_89/status/2067615368663982275",
+  "source_author": "塔斯海Tasihi @Tasihi_89",
+  "source_platform": "X",
+  "source_date": "2026-06-18",
+  "lang": "zh",
+  "added_at": "2026-10-13",
+  "status": "published"
+}

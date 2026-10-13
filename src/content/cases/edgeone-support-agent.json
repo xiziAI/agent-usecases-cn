@@ -1,0 +1,36 @@
+{
+  "slug": "edgeone-support-agent",
+  "title": "给自己的小网站加一个 24 小时 AI 客服",
+  "summary": "用 Claude Code 做的售卖网站上线后咨询太多，用腾讯云 EdgeOne Makers 托管网站并部署客服 Agent。",
+  "agents": [
+    "Claude Code",
+    "EdgeOne Makers"
+  ],
+  "category": "ecommerce",
+  "tags": [
+    "客服",
+    "建站",
+    "腾讯云"
+  ],
+  "scenario": "个人用 Claude Code 做了 giffgaff 英国卡售卖站，上线后很多人加微信咨询，回复不过来。",
+  "steps": [
+    "用 Claude Code Vibe Coding 做出售卖网站",
+    "在 EdgeOne Makers 选一个现成模板（官方 19 套）",
+    "部署网站并部署一个 AI 客服 Agent 自动回答常见问题"
+  ],
+  "result": "客服 Agent 已上线。平台自带对话记忆、工具调用、沙箱等能力（作者所述）。回复准确率、转化数据原文未提及。",
+  "pitfalls": "原文未提及；注意客服 Agent 回答涉及价格、售后时要设人工兜底。",
+  "prompt": "我在卖【商品】，网站是【网址】。请根据下面的常见问题和政策【粘贴 FAQ】，写一份客服 Agent 的系统提示词：只回答与商品相关的问题，不确定时让用户添加【人工联系方式】，绝不承诺退款或价格优惠。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "直连",
+  "cn_access_note": "EdgeOne Makers 是腾讯云产品；Claude Code 需代理。",
+  "source_url": "https://x.com/imwsl90/status/2071464230566371377",
+  "source_author": "卫斯理 @imwsl90",
+  "source_platform": "X",
+  "source_date": "2026-06-29",
+  "lang": "zh",
+  "added_at": "2026-10-13",
+  "status": "published"
+}

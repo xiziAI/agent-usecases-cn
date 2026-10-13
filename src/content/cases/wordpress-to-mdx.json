@@ -1,0 +1,36 @@
+{
+  "slug": "wordpress-to-mdx",
+  "title": "把 WordPress 博客迁到 MDX",
+  "summary": "Claude Code 用 REST API 拉取文章，一个下午迁完 367 篇文章和 5 个页面。",
+  "agents": [
+    "Claude Code"
+  ],
+  "category": "coding",
+  "tags": [
+    "迁移",
+    "博客"
+  ],
+  "scenario": "想把 WordPress 博客迁成本地 MDX。",
+  "steps": [
+    "给 Claude Code 一个目标：从 REST API 拉全部文章",
+    "转成带 frontmatter 的 MDX，按年份分文件夹",
+    "处理限流和编码错误",
+    "构建出错时让它批量修复"
+  ],
+  "result": "367 篇文章和 5 个页面一个下午迁完，作者估计约 4 小时。",
+  "pitfalls": "老文章的坏图片标签让构建卡住，靠正则批量修复。",
+  "prompt": "用 REST API 拉取我 WordPress 站【网址】的全部文章和页面，转成带 frontmatter（标题、日期、slug、标签）的 MDX，保存到【目录】。最后告诉我转换数量，以及哪些格式问题没能干净修好。",
+  "effort": "约 4 小时",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "需代理",
+  "cn_access_note": "Claude Code 需代理；可用 Kimi Code、Qwen Code。",
+  "source_url": "https://www.pawlean.com/posts/migrate-wordpress-to-mdx-claude-code",
+  "source_author": "Pauline",
+  "source_platform": "博客",
+  "source_date": "原文未提及",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/migrate-wordpress-posts-to-mdx"
+}

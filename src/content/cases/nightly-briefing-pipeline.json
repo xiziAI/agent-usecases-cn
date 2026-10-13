@@ -1,0 +1,35 @@
+{
+  "slug": "nightly-briefing-pipeline",
+  "title": "用定时任务跑夜间复盘和晨间简报",
+  "summary": "把自建 11 个 cron 中的 7 个迁到 Claude Code 云端定时任务，用 git 交接。",
+  "agents": [
+    "Claude Code"
+  ],
+  "category": "office",
+  "tags": [
+    "定时任务",
+    "简报"
+  ],
+  "scenario": "自建 Claude 自动化有 3 套环境、11 个 cron 和一个 Slack 守护进程，维护重。",
+  "steps": [
+    "盘点哪些任务能迁到云端定时任务",
+    "夜间复盘和晨间编排顺序执行，用 git 交接",
+    "每小时任务读 git 或调 API，各自提交输出"
+  ],
+  "result": "可去掉 11 个 cron 中的 7 个。常驻 Slack 监听做不到。",
+  "pitfalls": "每个云任务都在全新环境启动，需要持久消息或存储的仍需别的方案。",
+  "prompt": "设置一个夜间定时任务：扫描【目录/仓库/笔记】当天的工作，写一份简短复盘，并生成一页晨间简报到【路径】，内容包括【待办、阻塞、优先级】。先跑一次给我检查，再定时。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "需代理",
+  "cn_access_note": "Claude Code 需代理。",
+  "source_url": "https://www.reddit.com/r/ClaudeCode/comments/1s2j53l/claude_code_cloud_scheduled_tasks_one_feature",
+  "source_author": "Reddit 用户",
+  "source_platform": "Reddit",
+  "source_date": "2026-04-11",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/run-nightly-briefing-pipelines-with-scheduled-tasks"
+}

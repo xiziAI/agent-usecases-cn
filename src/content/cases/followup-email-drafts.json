@@ -1,0 +1,35 @@
+{
+  "slug": "followup-email-drafts",
+  "title": "对方没回邮件时自动起草跟进",
+  "summary": "Lindy 监听已发送邮件，过一段时间没回复就起草跟进邮件放进草稿，由人决定发不发。",
+  "agents": [
+    "Lindy"
+  ],
+  "category": "growth",
+  "tags": [
+    "邮件",
+    "跟进"
+  ],
+  "scenario": "发出的邮件常石沉大海，忘了跟进。",
+  "steps": [
+    "把 Lindy 接入已发送邮件",
+    "设定等待时间并检查是否有回复",
+    "没回复就起草跟进邮件发到收件箱等人审"
+  ],
+  "result": "用户称刚用一天，目前效果不错。没有更多数据。",
+  "pitfalls": "跟进邮件只是草稿，需要人工决定发送。",
+  "prompt": "监控我在【邮箱】发给【客户类型】的邮件，【N】个工作日没回复的，用我的语气起草一封简短礼貌的跟进，引用原邮件，存为草稿。绝不自动发送。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 1,
+  "cn_access": "需代理",
+  "cn_access_note": "Lindy 和 Gmail 需代理。",
+  "source_url": "https://www.reddit.com/r/EntrepreneurRideAlong/comments/1awb7xj/has_anyone_here_actually_used_lindy_or_similar_ai",
+  "source_author": "Reddit 用户",
+  "source_platform": "Reddit",
+  "source_date": "2024-02-01",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/draft-follow-up-emails-automatically-when-no-reply-arrives"
+}

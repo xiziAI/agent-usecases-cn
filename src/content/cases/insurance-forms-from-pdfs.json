@@ -1,0 +1,35 @@
+{
+  "slug": "insurance-forms-from-pdfs",
+  "title": "让 Agent 按病历 PDF 填保险理赔表",
+  "summary": "Felix Rieseberg 把医院 PDF 和保险网站交给 Claude Cowork，自己去喂新生儿。",
+  "agents": [
+    "Claude Cowork"
+  ],
+  "category": "life",
+  "tags": [
+    "保险",
+    "表单"
+  ],
+  "scenario": "刚有了孩子，理赔材料要按病历填，没时间。",
+  "steps": [
+    "把医院病历 PDF 放进一个文件夹",
+    "把保险网站交给 Claude Cowork",
+    "让它按资料填表"
+  ],
+  "result": "表格填写完成。用时和问题原文未提及。",
+  "pitfalls": "原文未提及；涉及医疗隐私，提交前必须人工核对。",
+  "prompt": "病历 PDF 在【文件夹】，需要在【保险网站/App】填写理赔表。读取病历，填写正确信息，标出缺失或不确定的项。提交前停下，把填写内容全部给我确认。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "需代理",
+  "cn_access_note": "Claude Cowork 需代理；国内理赔多在 App 内，需支持手机操作的 Agent。",
+  "source_url": "https://x.com/felixrieseberg/status/2014490352624005458",
+  "source_author": "Felix Rieseberg",
+  "source_platform": "X",
+  "source_date": "2026-01-23",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/fill-out-insurance-paperwork-from-hospital-records"
+}

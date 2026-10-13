@@ -1,0 +1,36 @@
+{
+  "slug": "clickup-daily-digest",
+  "title": "给没有账号的干系人每天发任务摘要",
+  "summary": "Make 每天早 6 点把 ClickUp 未完成任务按项目汇总，邮件发给项目干系人。",
+  "agents": [
+    "Make"
+  ],
+  "category": "office",
+  "tags": [
+    "项目管理",
+    "日报"
+  ],
+  "scenario": "老板要求让没有 ClickUp 账号的干系人每天收到进度。",
+  "steps": [
+    "ClickUp 建主任务表、项目表、联系人表",
+    "Make 每天 6 点拉未完成任务",
+    "按项目用文本聚合器分组",
+    "邮件发给项目干系人"
+  ],
+  "result": "第一版失败：邮件里出现整段 JSON。评论建议逐字段映射并按项目名分组。没有最终结果。",
+  "pitfalls": "上线前先把主题、收件人、正文写到表格里测试，再开真实发送。",
+  "prompt": "每天【时间】从【项目管理工具】拉取【快到期/有变更/被阻塞】的任务，按项目整理成干净的邮件摘要，发给【干系人邮箱】。先发一份测试给我，我批准前不要发给干系人。",
+  "effort": "原文未提及",
+  "cost": "原文未提及",
+  "difficulty": 2,
+  "cn_access": "有国产替代",
+  "cn_access_note": "ClickUp/Make 需代理；可用飞书项目+多维表格自动化。",
+  "source_url": "https://www.reddit.com/r/Make/comments/1u6amg9/clickup_x_makecom_automation_my_boss_wants_me_to",
+  "source_author": "Reddit 用户",
+  "source_platform": "Reddit",
+  "source_date": "2026-07-01",
+  "lang": "en",
+  "added_at": "2026-10-13",
+  "status": "published",
+  "via": "https://agentusecases.ai/use-case/email-daily-clickup-digests-to-stakeholders"
+}
