@@ -10,7 +10,7 @@ const agents = agentNames(cases);
 const activeCategories = categories.filter(category => cases.some(entry => entry.data.category === category.slug));
 ---
 <Layout>
-  <section class="hero"><h1>发现真实可用的 AI Agent 用例</h1><p>精选实践案例，从场景到提示词，一步步复现</p><div class="stats"><strong>{cases.length}</strong> 用例 <span>·</span> <strong>{activeCategories.length}</strong> 分类 <span>·</span> <strong>{agents.length}</strong> Agent</div></section>
+  <section class="hero"><h1>用 Agents 造出人们愿意付费的产品</h1><p>真实产品案例，构建经验与可复用的 Agent 工作流，帮你更快交付商业价值。</p><div class="stats"><strong>{cases.length}</strong> 用例 <span>|</span> <strong>{activeCategories.length}</strong> 分类 <span>|</span> <strong>{agents.length}</strong> Agent</div></section>
   <section class="search-panel" aria-label="搜索案例"><Search /></section>
   <section id="categories" class="category-section"><h2 class="filter-title">按场景探索</h2><div class="chips"><a class="chip active" href="/" aria-current="page"><Icon name="grid" />全部<span>{cases.length}</span></a>{activeCategories.map(c => <a class="chip" href={`/category/${c.slug}/`}><Icon name={c.icon} />{c.name}<span>{cases.filter(entry => entry.data.category === c.slug).length}</span></a>)}</div></section>
   <section id="agents" class="agent-section"><h2>按 Agent 探索</h2><div class="chips">{agents.map(name => <a class="chip" href={`/agents/${agentSlug(name)}/`}><Icon name="bot" size={16} />{name}<span>{cases.filter(c => c.data.agents.includes(name)).length}</span></a>)}</div></section>
