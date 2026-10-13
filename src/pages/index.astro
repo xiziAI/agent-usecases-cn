@@ -6,11 +6,12 @@ import { allCases, agentNames, agentSlug } from '../lib/cases';
 import { categories } from '../data/categories';
 const cases = await allCases();
 const agents = agentNames(cases);
+const activeCategories = categories.filter(category => cases.some(entry => entry.data.category === category.slug));
 ---
 <Layout>
-  <section class="hero"><p class="eyebrow">AI AGENT / 实践指南</p><h1>少一点想象，<br />多一个<span>可复制的案例。</span></h1><p>发现 AI Agent 能帮你做什么。场景、步骤、中文提示词与国内可用性，一次看清。</p><div class="stats"><strong>{cases.length}</strong> 个案例 <span>·</span> <strong>{categories.length}</strong> 个分类 <span>·</span> <strong>{agents.length}</strong> 个 Agent</div></section>
+  <section class="hero"><p class="eyebrow">AI AGENT / 实践指南</p><h1>少一点想象，<br />多一个<span>可复制的案例。</span></h1><p>发现 AI Agent 能帮你做什么。场景、步骤、中文提示词与国内可用性，一次看清。</p><div class="stats"><strong>{cases.length}</strong> 个案例 <span>·</span> <strong>{activeCategories.length}</strong> 个分类 <span>·</span> <strong>{agents.length}</strong> 个 Agent</div></section>
   <section class="search-panel" aria-label="搜索案例"><Search /></section>
-  <section><h2>按场景探索</h2><div class="chips">{categories.map(c => <a class="chip" href={`/category/${c.slug}/`}>{c.name}<span>{cases.filter(entry => entry.data.category === c.slug).length}</span></a>)}</div></section>
+  <section><h2>按场景探索</h2><div class="chips">{activeCategories.map(c => <a class="chip" href={`/category/${c.slug}/`}>{c.name}<span>{cases.filter(entry => entry.data.category === c.slug).length}</span></a>)}</div></section>
   <section><h2>按 Agent 探索</h2><div class="chips">{agents.map(name => <a class="chip" href={`/agents/${agentSlug(name)}/`}>{name}<span>{cases.filter(c => c.data.agents.includes(name)).length}</span></a>)}</div></section>
   <section><div class="section-heading"><h2>最新案例</h2><span class="muted">按收录时间排序</span></div><CaseList cases={cases} /></section>
 </Layout>

@@ -11,10 +11,10 @@ const cases = defineCollection({
   schema: z.object({
     slug: text.regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/), title: text, summary: text,
     agents: z.array(text).min(1), category: z.enum(categorySlugs), tags: z.array(text),
-    scenario: text, steps: z.array(text).min(1), result: text, pitfalls: text, prompt: text,
-    effort: text, cost: text, difficulty: z.number().int().min(1).max(3),
+    scenario: text, steps: z.array(text).min(1), result: text, pitfalls: z.string(), prompt: z.string(),
+    effort: z.string(), cost: z.string(), difficulty: z.number().int().min(1).max(3),
     cn_access: z.enum(['直连', '需代理', '有国产替代']), cn_access_note: text,
-    source_url: z.string().url(), source_author: text, source_platform: text, source_date: z.union([date, z.literal("原文未提及")]),
+    source_url: z.string().url(), source_author: text, source_platform: text, source_date: z.union([date, z.literal("")]),
     lang: text, via: z.string().url().optional(), added_at: date, status: text,
   }),
 });

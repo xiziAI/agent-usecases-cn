@@ -5,23 +5,26 @@ import { categoryName } from '../../data/categories';
 export async function getStaticPaths() { return (await allCases()).map(entry => ({ params: { slug: entry.data.slug }, props: { entry } })); }
 const { entry } = Astro.props;
 const c = entry.data;
+const isProvided = (value?: string) => Boolean(value?.trim() && value.trim() !== '\u539f\u6587\u672a\u63d0\u53ca');
+const languages: Record<string, string> = { zh: '中文', en: '英文' };
+const statuses: Record<string, string> = { published: '已发布', draft: '草稿', archived: '已归档', pending: '待审核' };
 ---
 <Layout title={c.title} description={c.summary}>
   <a class="back" href="/">← 全部案例</a>
   <article class="detail" data-pagefind-body>
     <header class="page-heading"><a class="eyebrow" href={`/category/${c.category}/`}>{categoryName(c.category)}</a><h1 data-pagefind-meta="title">{c.title}</h1><p data-pagefind-meta="description">{c.summary}</p></header>
-    <dl class="facts"><div><dt>Agent</dt><dd>{c.agents.map((name, index) => <><a href={`/agents/${agentSlug(name)}/`}>{name}</a>{index < c.agents.length - 1 && ' / '}</>)}</dd></div><div><dt>分类</dt><dd>{categoryName(c.category)}</dd></div><div><dt>难度</dt><dd>{['入门', '进阶', '复杂'][c.difficulty - 1]}（{c.difficulty}/3）</dd></div><div><dt>标签</dt><dd>{c.tags.length ? c.tags.join('、') : '无'}</dd></div><div><dt>语言</dt><dd>{c.lang}</dd></div><div><dt>收录日期</dt><dd><time datetime={c.added_at}>{c.added_at}</time></dd></div><div><dt>状态</dt><dd>{c.status}</dd></div><div><dt>案例标识</dt><dd>{c.slug}</dd></div></dl>
+    <dl class="facts"><div><dt>Agent</dt><dd>{c.agents.map((name, index) => <><a href={`/agents/${agentSlug(name)}/`}>{name}</a>{index < c.agents.length - 1 && ' / '}</>)}</dd></div><div><dt>分类</dt><dd>{categoryName(c.category)}</dd></div><div><dt>难度</dt><dd>{['入门', '进阶', '复杂'][c.difficulty - 1]}（{c.difficulty}/3）</dd></div><div><dt>标签</dt><dd>{c.tags.length ? c.tags.join('、') : '无'}</dd></div>{isProvided(c.lang) && <div><dt>语言</dt><dd>{languages[c.lang] ?? c.lang}</dd></div>}<div><dt>收录日期</dt><dd><time datetime={c.added_at}>{c.added_at}</time></dd></div>{statuses[c.status] && <div><dt>状态</dt><dd>{statuses[c.status]}</dd></div>}</dl>
     <section><h2>场景</h2><p>{c.scenario}</p></section>
     <section><h2>步骤</h2><ol class="steps">{c.steps.map(step => <li>{step}</li>)}</ol></section>
     <section><h2>结果</h2><p>{c.result}</p></section>
-    <section class="prompt-block"><div class="section-heading"><h2>可复制的中文提示词</h2><button type="button" id="copy-prompt" aria-describedby="copy-status">复制提示词</button></div><pre id="prompt-text">{c.prompt}</pre><p id="copy-status" role="status" aria-live="polite"></p></section>
-    <dl class="facts"><div><dt>耗时</dt><dd>{c.effort}</dd></div><div><dt>成本(人民币)</dt><dd>{c.cost}</dd></div></dl>
-    <section><h2>坑</h2><p>{c.pitfalls}</p></section>
+    {isProvided(c.prompt) && <section class="prompt-block"><div class="section-heading"><h2>可复制的中文提示词</h2><button type="button" id="copy-prompt" aria-describedby="copy-status">复制提示词</button></div><pre id="prompt-text">{c.prompt}</pre><p id="copy-status" role="status" aria-live="polite"></p></section>}
+    {(isProvided(c.effort) || isProvided(c.cost)) && <dl class="facts">{isProvided(c.effort) && <div><dt>耗时</dt><dd>{c.effort}</dd></div>}{isProvided(c.cost) && <div><dt>成本（人民币）</dt><dd>{c.cost}</dd></div>}</dl>}
+    {isProvided(c.pitfalls) && <section><h2>坑</h2><p>{c.pitfalls}</p></section>}
     <section><h2>国内是否可用</h2><p><strong>{c.cn_access}</strong> · {c.cn_access_note}</p></section>
-    <section class="source"><h2>来源</h2><p><a href={c.source_url} target="_blank" rel="noopener noreferrer">{c.source_author} · {c.source_platform} ↗</a><br /><time datetime={c.source_date}>{c.source_date}</time></p>{c.via && <p><a href={c.via} target="_blank" rel="noopener noreferrer">via agentusecases.ai ↗</a></p>}</section>
+    <section class="source"><h2>来源</h2><p><a href={c.source_url} target="_blank" rel="noopener noreferrer">{c.source_author} · {c.source_platform} ↗</a>{isProvided(c.source_date) && <><br /><time datetime={c.source_date}>{c.source_date}</time></>}</p>{c.via && <p><a href={c.via} target="_blank" rel="noopener noreferrer">via agentusecases.ai ↗</a></p>}</section>
   </article>
   <script is:inline>
-    document.getElementById('copy-prompt').addEventListener('click', async () => {
+    document.getElementById('copy-prompt')?.addEventListener('click', async () => {
       const status = document.getElementById('copy-status');
       try {
         await navigator.clipboard.writeText(document.getElementById('prompt-text').textContent);

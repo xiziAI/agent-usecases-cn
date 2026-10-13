@@ -18,9 +18,9 @@
     "封装成开源 skill：sync-skills"
   ],
   "result": "作者称“改哪边都一样，再也不用同步”。",
-  "pitfalls": "原文未提及",
+  "pitfalls": "",
   "prompt": "我的 Skill 分散在【Claude Code skills 目录】和【Codex skills 目录】。请先列出两边差异，把较新的版本合并到【主目录】，备份原目录后用软链接让两边指向主目录。每一步执行前先给我看命令。",
-  "effort": "原文未提及",
+  "effort": "",
   "cost": "免费",
   "difficulty": 1,
   "cn_access": "需代理",
