@@ -28,22 +28,15 @@ button, input { font: inherit; }
 .icon { flex-shrink: 0; vertical-align: middle; }
 .container { width: min(1040px, calc(100% - 48px)); margin-inline: auto; }
 .site-header { border-bottom: 1px solid var(--border); background: var(--bg); }
-.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 76px; }
+.header-inner { display: flex; align-items: center; min-height: 76px; }
 .brand, .footer-brand { display: inline-flex; align-items: center; gap: 16px; }
 .brand { font-size: 21px; font-weight: 600; letter-spacing: -.025em; }
 .brand .icon { color: var(--accent); }
-nav { display: flex; gap: 28px; font-size: 14px; }
-nav a { display: flex; align-items: center; gap: 8px; color: var(--muted); padding-block: 24px; border-bottom: 1px solid transparent; }
-nav a[aria-current="page"] { color: var(--text); border-color: var(--accent); }
-nav a[aria-current="page"] .icon { color: var(--accent); }
 main { min-height: 75vh; padding-bottom: 88px; }
 .hero { padding: 70px 0 0; margin: 0 0 40px; }
 h1, h2, h3 { line-height: 1.4; font-weight: 600; letter-spacing: -.025em; text-wrap: pretty; }
 h1 { font-size: clamp(30px, 4vw, 44px); margin: 0 0 16px; }
 .hero > p { color: var(--muted); font-size: 20px; margin: 0; }
-.stats { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; color: var(--muted); font-size: 15px; margin-top: 26px; }
-.stats strong { color: var(--accent); font-size: 27px; font-weight: 500; font-family: ui-monospace, monospace; }
-.stats > span { margin-inline: 10px; }
 section { margin-block: 44px; }
 h2 { display: flex; align-items: center; gap: 12px; font-size: 19px; margin: 0 0 20px; }
 .search-panel { margin-block: 40px 28px; }
@@ -133,10 +126,6 @@ pre { font-family: ui-monospace, SFMono-Regular, Consolas, "PingFang SC", monosp
 .empty { padding: 40px 24px; border: 1px dashed var(--border); border-radius: 8px; color: var(--muted); }
 footer { border-top: 1px solid var(--border); padding-block: 28px; font-size: 12px; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
 @media (max-width: 700px) {
- .header-inner { flex-wrap: wrap; gap: 0; padding-top: 16px; }
- nav { width: 100%; justify-content: space-between; gap: 12px; }
- nav a { padding-block: 15px; font-size: 12px; }
- nav .icon { width: 16px; }
  .hero { padding-top: 44px; }
  .hero > p { font-size: 16px; }
  .case-list { grid-template-columns: 1fr; }
@@ -145,8 +134,6 @@ footer { border-top: 1px solid var(--border); padding-block: 28px; font-size: 12
 }
 @media (max-width: 420px) {
  .container { width: calc(100% - 32px); }
- .stats { gap: 8px; font-size: 13px; }
- .stats > span { margin-inline: 3px; }
  .chip { padding: 9px 12px; }
  .detail-meta { gap: 12px 18px; }
  .facts { grid-template-columns: 1fr; }
