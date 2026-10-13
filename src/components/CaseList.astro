@@ -1,7 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { categoryName } from '../data/categories';
+import { categoryIcon } from '../data/categories';
+import Icon from './Icon.astro';
 interface Props { cases: CollectionEntry<'cases'>[]; }
 const { cases } = Astro.props;
 ---
-{cases.length ? <ul class="case-list">{cases.map(({ data: c }) => <li class="case-card"><div class="meta"><a href={`/category/${c.category}/`}>{categoryName(c.category)}</a><span>{c.cn_access}</span><span>难度 {'●'.repeat(c.difficulty)}{'○'.repeat(3 - c.difficulty)}</span></div><h3><a href={`/use-case/${c.slug}/`}>{c.title} <span aria-hidden="true">↗</span></a></h3><p>{c.summary}</p><div class="card-bottom"><span>{c.agents.join(' / ')}</span><time datetime={c.added_at}>{c.added_at}</time></div></li>)}</ul> : <p class="empty">这里还没有案例，先去<a href="/">看看其他分类</a>。</p>}
+{cases.length ? <ul class="case-list">{cases.map(({ data: c }) => <li><a class="case-card" href={`/use-case/${c.slug}/`}><div class="card-title"><Icon name={categoryIcon(c.category)} size={26} /><h3>{c.title}</h3><Icon name="arrow" class="card-arrow" /></div><p>{c.summary}</p><div class="card-bottom"><span><Icon name="bot" size={18} />{c.agents.join(' / ')}</span><span class="step-meta"><Icon name="list" size={18} />{c.steps.length} 步</span></div></a></li>)}</ul> : <p class="empty">这里还没有用例，先去<a href="/">看看其他分类</a>。</p>}

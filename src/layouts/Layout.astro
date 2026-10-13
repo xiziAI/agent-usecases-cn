@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Icon from '../components/Icon.astro';
 interface Props { title?: string; description?: string; }
 const { title = '让 AI Agent 用在实处', description = '用中文记录 AI Agent 的真实应用场景、操作步骤、提示词与国内可用性。' } = Astro.props;
 ---
@@ -7,12 +8,12 @@ const { title = '让 AI Agent 用在实处', description = '用中文记录 AI A
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title} · Agent 案例库</title><meta name="description" content={description} />
-    <link rel="alternate" type="application/rss+xml" title="Agent 案例库" href="/rss.xml" />
+    <title>{title} · Agent 用例库</title><meta name="description" content={description} />
+    <link rel="alternate" type="application/rss+xml" title="Agent 用例库" href="/rss.xml" />
   </head>
   <body>
-    <header class="site-header"><div class="container header-inner"><a class="brand" href="/">Agent <span>案例库</span></a><nav aria-label="主导航"><a href="/">浏览案例</a><a href="/search/">搜索</a><a href="/rss.xml">RSS ↗</a></nav></div></header>
+    <header class="site-header"><div class="container header-inner"><a class="brand" href="/"><Icon name="terminal" size={28} />Agent 用例库</a><nav aria-label="主导航"><a href="/" aria-current={Astro.url.pathname === '/' ? 'page' : undefined}><Icon name="book" />用例</a><a href="/#categories"><Icon name="grid" />分类</a><a href="/#agents"><Icon name="bot" />Agent</a><a href="#footer"><Icon name="info" />关于</a></nav></div></header>
     <main class="container"><slot /></main>
-    <footer class="container">Agent 案例库 <span>从一个具体场景开始，让想法变成行动。</span></footer>
+    <footer id="footer" class="container"><a class="footer-brand" href="/"><Icon name="terminal" />Agent 用例库</a> <span>从一个具体场景开始，让想法变成行动。</span></footer>
   </body>
 </html>

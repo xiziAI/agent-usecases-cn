@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
-<div id="search" aria-label="搜索案例"></div>
+<div id="search" aria-label="搜索用例"></div>
 <p id="search-status" class="muted" role="status">正在加载搜索…</p>
 <script is:inline src="/pagefind/pagefind-ui.js"></script>
 <script is:inline>
   const status = document.getElementById('search-status');
   if (window.PagefindUI) {
-    const ui = new PagefindUI({ element: '#search', showSubResults: false, translations: { placeholder: '搜索场景、Agent 或提示词…', zero_results: '没有找到相关案例', clear_search: '清除', search_label: '搜索案例', load_more: '加载更多', searching: '搜索中…', one_result: '找到 1 个案例', many_results: '找到 [COUNT] 个案例' } });
+    const ui = new PagefindUI({ element: '#search', showSubResults: false, translations: { placeholder: '搜索用例、Agent 或场景', zero_results: '没有找到相关用例', clear_search: '清除', search_label: '搜索用例', load_more: '加载更多', searching: '搜索中…', one_result: '找到 1 个用例', many_results: '找到 [COUNT] 个用例' } });
     status.hidden = true;
     const query = new URLSearchParams(window.location.search).get('q');
     if (query) ui.triggerSearch(query);

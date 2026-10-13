@@ -7,4 +7,4 @@ export function getStaticPaths() { return categories.map(category => ({ params: 
 const { category } = Astro.props;
 const cases = (await allCases()).filter(c => c.data.category === category.slug);
 ---
-<Layout title={category.name}><a class="back" href="/">← 全部案例</a><div class="page-heading"><p class="eyebrow">场景分类 / {cases.length} 个案例</p><h1>{category.name}</h1></div><CaseList cases={cases} /></Layout>
+<Layout title={category.name}><a class="back" href="/">← 返回用例库</a><div class="page-heading"><p class="eyebrow">场景分类 / {cases.length} 个用例</p><h1>{category.name}</h1></div><CaseList cases={cases} /></Layout>
